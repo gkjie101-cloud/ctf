@@ -64,7 +64,7 @@ def pretty(resp):
 
 
 def cmd_challenges(s, args):
-    r = s.get(f"{BASE_URL}/api/game/{game_id(args.game)}/challenges")
+    r = s.get(f"{BASE_URL}/api/game/{game_id(args.game)}/details")
     print(f"HTTP {r.status_code}")
     print(pretty(r))
 
