@@ -76,13 +76,13 @@ def cmd_challenge(s, args):
 
 
 def cmd_start(s, args):
-    r = s.post(f"{BASE_URL}/api/game/{game_id(args.game)}/challenges/{args.challenge_id}/container")
+    r = s.post(f"{BASE_URL}/api/game/{game_id(args.game)}/container/{args.challenge_id}")
     print(f"HTTP {r.status_code}")
     print(pretty(r))
 
 
 def cmd_stop(s, args):
-    r = s.delete(f"{BASE_URL}/api/game/{game_id(args.game)}/challenges/{args.challenge_id}/container")
+    r = s.delete(f"{BASE_URL}/api/game/{game_id(args.game)}/container/{args.challenge_id}")
     print(f"HTTP {r.status_code}")
     print(pretty(r))
 
